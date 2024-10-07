@@ -21,4 +21,4 @@ Follow these steps to install the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourproject.git
+   https://github.com/suryansh4424/AEGIS.git
