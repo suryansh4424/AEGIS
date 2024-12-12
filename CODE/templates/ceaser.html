@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Caesar Cipher</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="word">Enter text to encrypt/decrypt:</label>
+                <input type="text" class="form-control" id="word" name="word" required>
+            </div>
+            <div class="form-group">
+                <label for="shift">Enter shift value:</label>
+                <input type="number" class="form-control" id="shift" name="shift" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Encrypt/Decrypt</button>
+        </form>
+        {% if encrypted %}
+        <div class="mt-4">
+            <h3>Encrypted Text (Caesar):</h3>
+            <p>{{ encrypted }}</p>
+        </div>
+        <div class="mt-4">
+            <h3>Decrypted Text:</h3>
+            <p>{{ decrypted }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

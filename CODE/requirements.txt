@@ -1,0 +1,7 @@
+httpx
+numpy
+scikit-optimize
+rich
+pyinquirer
+pycryptodome
+Flask

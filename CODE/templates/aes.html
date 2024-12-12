@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES Encryption</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4a90e2;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #4a90e2;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357ab7;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function validateKey() {
+            const key = document.getElementById('key').value;
+            if (key && key.length !== 16 && key.length !== 24 && key.length !== 32) {
+                document.getElementById('key-error').innerText = "Key must be 16, 24, or 32 characters long.";
+                return false;
+            }
+            document.getElementById('key-error').innerText = "";
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<div class="header">
+    <h1>AES Encryption</h1>
+</div>
+
+<div class="container">
+    <h2>Encrypt your text using AES</h2>
+    <form action="/aes" method="POST" onsubmit="return validateKey()">
+        <div class="form-group">
+            <label for="plaintext">Enter Text to Encrypt:</label>
+            <textarea id="plaintext" name="plaintext" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="key">Optional Key (16, 24, or 32 characters):</label>
+            <input type="text" id="key" name="key" placeholder="Leave blank for a random key">
+            <div id="key-error" class="error"></div>
+        </div>
+        <button type="submit">Encrypt</button>
+    </form>
+
+    {% if encrypted %}
+    <div class="result">
+        <p><strong>Generated/Provided Key:</strong> {{ key }}</p>
+        <p><strong>IV (Base64 Encoded):</strong> {{ iv }}</p>
+        <p><strong>Encrypted Text (Ciphertext, Base64 Encoded):</strong> {{ encrypted }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

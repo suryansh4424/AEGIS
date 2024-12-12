@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEGIS Cryptography - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4a90e2;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #4a90e2;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .grid-item {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to AEGIS Cryptography</h1>
+        <p>Select an encryption technique to explore and use</p>
+    </div>
+
+    <div class="container">
+        <div class="grid-container">
+            <div class="grid-item"><a href="/aes">AES Encryption</a></div>
+            <div class="grid-item"><a href="/des">DES Encryption</a></div>
+            <div class="grid-item"><a href="/rsa">RSA Encryption</a></div>
+            <div class="grid-item"><a href="/affine">Affine Cipher</a></div>
+            <div class="grid-item"><a href="/base64">Base64 Encoding</a></div>
+            <div class="grid-item"><a href="/caesar">Caesar Cipher</a></div>
+            <div class="grid-item"><a href="/diffie_hellman">Diffie-Hellman</a></div>
+            <div class="grid-item"><a href="/elgamal">ElGamal Encryption</a></div>
+            <div class="grid-item"><a href="/hash">Hash Functions</a></div>
+            <div class="grid-item"><a href="/hill">Hill Cipher</a></div>
+            <div class="grid-item"><a href="/homophonic">Homophonic Substitution</a></div>
+            <div class="grid-item"><a href="/morse">Morse Code</a></div>
+            <div class="grid-item"><a href="/onetimepad">One-Time Pad</a></div>
+            <div class="grid-item"><a href="/playfair">Playfair Cipher</a></div>
+            <div class="grid-item"><a href="/polybius">Polybius Square</a></div>
+            <div class="grid-item"><a href="/railfence">Rail Fence Cipher</a></div>
+            <div class="grid-item"><a href="/scytale">Scytale Cipher</a></div>
+            <div class="grid-item"><a href="/transposition">Transposition Cipher</a></div>
+            <div class="grid-item"><a href="/vigenere">Vigenère Cipher</a></div>
+            <div class="grid-item"><a href="/xor">XOR Encryption</a></div>
+        </div>
+    </div>
+
+</body>
+</html>

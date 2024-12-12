@@ -1,0 +1,17 @@
+body {
+    background-color: #f4f4f9;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    color: #6c757d;
+}
+
+.container {
+    margin-top: 80px;
+}
+
+.btn {
+    font-size: 1.2rem;
+}
